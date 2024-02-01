@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright(c) 2021,
+  ~    项目名称:UI模块
+  ~    文件名称:startjobfloat.xml
+  ~    创建时间:2021/8/28 下午11:10
+  ~    作者:laogui，QQ：1156346325
+  -->
+
+<LinearLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xsi:noNamespaceSchemaLocation="layout.xsd"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#66FFD700">
+    <TextView android:layout_width="wrap_parent"
+              android:layout_height="wrap_content"
+              android:background="#66FF0000"
+              android:text="开始"
+              android:textColor="#FFFFFF"
+              android:tag="jobone"/>
+    <TextView android:layout_width="wrap_parent"
+              android:layout_height="wrap_content"
+              android:background="#66FFcc00"
+              android:text="任务二"
+              android:textColor="#FFFFFF"
+              android:tag="jobtwo"/>
+    <TextView android:layout_width="wrap_parent"
+              android:layout_height="wrap_content"
+              android:background="#66ccFF00"
+              android:text="停止"
+              android:textColor="#FFFFFF"
+              android:tag="jobthree"/>
+
+</LinearLayout>

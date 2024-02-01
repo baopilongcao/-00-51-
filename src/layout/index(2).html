@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 清理浏览器默认样式 -->
+    <link rel="stylesheet" href="css/reset200802.css">
+    <style>
+        .item .product {
+            width: 32%;
+            text-align: center;
+            margin: -2px;
+            margin-bottom: 12px;
+        }
+
+        .pb {
+            margin-top: 0px;
+            padding-top: 0px;
+            font-size: 14px;
+        }
+
+        .inline-div {
+            display: inline-block;
+        }
+
+        .come {
+            padding: 0px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-tabs type="border-card">
+            <el-tab-pane label="功能设置">
+                <div v-for="(card,index) in cards">
+                    <el-card class="box-card" :body-style="{ display: card.fold ? 'block' : 'none' }">
+                        <div slot="header" class="clearfix">
+                            <span>{{ card.title }}</span>
+                            <el-button style="float: right; padding: 1px 0" type="text" @click="toggleCard(index)"><i
+                                    :class="[card.fold ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i></el-button>
+                        </div>
+                        <div class="text item">
+                            <div v-for="product in card.products" class="inline-div product"
+                                :onclick="'window.location.href=\'' + product.href + '\''">
+                                <img :src="product.img_src" alt="" width="50px">
+                                <p class="pb">{{product.name}}</p>
+                            </div>
+                        </div>
+                    </el-card>
+                    <el-divider v-if="(index + 1) !== cards.length" class="come"></el-divider>
+                </div>
+            </el-tab-pane>
+            <el-tab-pane label="个人中心">
+
+            </el-tab-pane>
+        </el-tabs>
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="htmljs/vue.js"></script>
+<!-- import JavaScript -->
+<script src="htmljs/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                cards: [
+                    {
+                        title: '抖音',
+                        fold: true,
+                        products: [
+                            {
+                                name: '智能引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '精准截流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '直播场控',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '同城引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '粉丝画像引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            }
+                        ]
+                    },
+                    {
+                        title: '快手',
+                        fold: false,
+                        products: [
+                            {
+                                name: '万能引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '直播场控',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '智能养号',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '行业转化',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '群成员转化',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '截流评论',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '精准引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '精准评论',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            }
+                        ]
+                    },
+                    {
+                        title: '小红书',
+                        fold: false,
+                        products: [
+                            {
+                                name: '万能引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '粉丝转化',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '行业转化',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            },
+                            {
+                                name: '同城引流',
+                                img_src: '/sdcard/播放器.png',
+                                href: 'index.html'
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        methods: {
+            toggleCard: function (index) {
+                this.cards[index].fold = !this.cards[index].fold
+            }
+        },
+    })
+</script>
+
+</html>

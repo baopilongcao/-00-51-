@@ -1,0 +1,73 @@
+body {
+            
+    background: linear-gradient(#e66465, #9198e5);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 400px;
+    color: #f8f9fa;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #000000;
+    justify-content: center;
+    text-align: center;
+}
+
+.login input {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 22px;
+    outline: none;
+    color: #f8f9fa;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    border: 2px solid #3498db;
+    width: 220px;
+}
+
+.login input[type="submit"] {
+    width: 247.2px;
+    border: 2px solid #2ecc71;
+    cursor: pointer;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: #2ecc71;
+    width: 250px;
+    translate: 0.5s;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #2ecc71;
+    translate: 0.5s;
+}
+.container{
+height: auto;
+}
+/* 子容器样式 */
+.login-box {
+position: absolute;
+top: 50%;
+left: 45%;
+transform: translate(-50%, -50%);
+width: 400px;
+padding: 40px;
+/* background: rgba(255, 255, 255, 0.2); */
+box-sizing: border-box;
+/* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); */
+border-radius: 10px;
+}

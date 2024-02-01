@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>智能获客系统</title>
+    <meta name="keywords" content="智能获客系统">
+    <meta name="description" content="智能获客系统">
+<!--    <link rel="stylesheet" href="../qituibao/css/text.css">-->
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="../huituibao/css/index1.css">
+    <link rel="stylesheet" href="../huituibao/css/css.css">
+    <link rel="stylesheet" href="../huituibao/css/reset200802.css">
+    <script src="../../public/JavaScript/vue.js"></script>
+    <script src="../../public/JavaScript/jquery1.min.js"></script>
+    <script src="../../public/JavaScript/jquery.min.js"></script>
+    <!-- import JavaScript -->
+    <script src="../../public/JavaScript/index.js"></script>
+    <script src="../../public/JavaScript/JavaScript.js"></script>
+
+</head>
+<body>
+<!--    <header class="header">-->
+<!--        <h1>慧推宝·智能获客</h1>-->
+<!--    </header>-->
+    <main class="max tou">
+<!--        <div class="app imgBox">-->
+<!--            <img src="../huituibao/images/lbt1.jpg" alt="img1" style="height: auto;" class="img-slide img lbt">-->
+<!--            <img src="../huituibao/images/lbt1.jpg" alt="img2" style="height: auto;" class="img-slide img lbt">-->
+<!--        </div>-->
+<!--    <script src="../qituibao/JavaScript/jia.js"></script>-->
+        <div class="app imgBox">
+            <img src="images/lbt1.png" alt="img1" style="height: auto;" class="img-slide img lbt">
+            <img src="images/lbt2.png" alt="img2" style="height: auto;" class="img-slide img lbt">
+            <img src="images/lbt3.png" alt="img3" style="height: auto;" class="img-slide img lbt">
+            <img src="images/lbt4.png" alt="img4" style="height: auto;" class="img-slide img lbt">
+        </div>
+        <!--    <script src="../qituibao/JavaScript/jia.js"></script>-->
+        <script src="JavaScript/lbt.js"></script>
+        <div id="app">
+            <!--公告-->
+
+            <!--大板块-->
+            <div v-for="(card,index) in cards" v-if="![4].includes(card.id)">
+                <!--v-if="![].includes(card.id)-->
+                <el-card class="box-card" :body-style="{ display: card.fold ? 'block' : 'none' }">
+                    <div slot="header" class="clearfix">
+                        <span>{{ card.title }}</span>
+                        <el-button style="float: right; padding: 1px 0" type="text" @click="toggleCard(index)"><i
+                                :class="[card.fold ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i></el-button>
+                    </div>
+                    <div class="text item">
+                        <div v-for="product in card.products" class="inline-div product"
+                            :onclick="'window.location.href=\'' + product.href + '\''"
+                            v-if="![].includes(product.id)" style="margin-top: 15px; margin-bottom: 15px;">
+                            <!--v-if="![].includes(product.id)-->
+                            <img :src="product.htb_img_src" alt="" width="40px">
+                            <p class="pb">{{product.htb_name}}</p>
+                        </div>
+                    </div>
+                </el-card>
+                <el-divider v-if="(index + 1) !== cards.length" class="come"></el-divider>
+            </div>
+        </div>
+        <!-- 版权说明 -->
+        <div class="powered">
+            <span>本APP仅供个人使用,请勿用于非法途径!一切后果自负</span>
+            <span>powered by 慧推宝</span>
+        </div>
+        <!-- 底部选项 -->
+        <div class="menu">
+            <div class="subMenu text-center" onclick="window.location.href='./index.html'">
+                <img style="margin: -5px; margin-top:0px; " class="menu_img" src="../huituibao/images/shouye.png" alt="">
+                <div class="menu_name">首页</div>
+            </div>
+            <div class="subMenu text-center" onclick="window.location.href='./bh.html'">
+                <img style="margin: -5px; margin-top:0px; " class="menu_img" src="../huituibao/images/shezhi.png" alt="">
+                <div class="menu_name">设置</div>
+            </div>
+            <div class="subMenu text-center" onclick="window.location.href='./grzx.html'">
+                <img style="margin: -5px; margin-top:0px; " class="menu_img" src="../huituibao/images/my.png" alt="">
+                <div class="menu_name">个人中心</div>
+            </div>
+        </div>
+    
+    </main>
+</header>
+</body>
+<!--alert('引用gn.js');-->
+<script src="../../public/JavaScript/gn.js"></script>
+</html>

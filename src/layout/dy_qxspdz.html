@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>老冷编程学院http://bbs.laoleng.vip</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.7/theme-chalk/index.min.css">
+    <link rel="stylesheet" href="https://ks3-cn-beijing.ksyun.com/vform2021/VFormRender.css?t=20210720">
+    <style type="text/css">
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <v-form-render :form-json="formJson" :form-data="formData" :option-data="optionData" ref="vFormRef">
+    </v-form-render>
+    <el-button type="primary" @click="saveForm(0)">保存</el-button>
+    <el-button type="primary" @click="saveForm(1)">运行</el-button>
+</div>
+
+
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/element-ui/2.15.7/index.min.js"></script>
+<script src="https://ks3-cn-beijing.ksyun.com/vform2021/VFormRender.umd.min.js?t=20210720"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            formJson: {
+                "widgetList": [
+                    {
+                        "type": "divider",
+                        "icon": "divider",
+                        "formItemFlag": false,
+                        "options": {
+                            "name": "divider38491",
+                            "label": "",
+                            "columnWidth": "200px",
+                            "direction": "horizontal",
+                            "contentPosition": "center",
+                            "hidden": false,
+                            "customClass": "",
+                            "onCreated": "",
+                            "onMounted": ""
+                        },
+                        "id": "divider38491"
+                    },
+                    {
+                        "type": "alert",
+                        "icon": "alert",
+                        "formItemFlag": false,
+                        "options": {
+                            "name": "取消视频点赞",
+                            "title": "取消视频点赞",
+                            "type": "error",
+                            "description": "",
+                            "closable": false,
+                            "closeText": "",
+                            "center": true,
+                            "showIcon": false,
+                            "effect": "dark",
+                            "hidden": false,
+                            "onClose": "",
+                            "customClass": [],
+                            "label": "alert"
+                        },
+                        "id": "alert115924"
+                    },
+                    {
+                        "type": "divider",
+                        "icon": "divider",
+                        "formItemFlag": false,
+                        "options": {
+                            "name": "divider97172",
+                            "label": "",
+                            "columnWidth": "200px",
+                            "direction": "horizontal",
+                            "contentPosition": "center",
+                            "hidden": false,
+                            "customClass": "",
+                            "onCreated": "",
+                            "onMounted": ""
+                        },
+                        "id": "divider97172"
+                    },
+                    {
+                        "type": "input",
+                        "icon": "text-field",
+                        "formItemFlag": true,
+                        "options": {
+                            "name": "取消视频点赞_使用说明",
+                            "label": "使用说明:",
+                            "labelAlign": "label-center-align",
+                            "type": "text",
+                            "defaultValue": "喜欢列表点开第一个视频启动",
+                            "placeholder": "",
+                            "columnWidth": "200px",
+                            "size": "",
+                            "labelWidth": null,
+                            "labelHidden": false,
+                            "readonly": true,
+                            "disabled": false,
+                            "hidden": false,
+                            "clearable": false,
+                            "showPassword": false,
+                            "required": false,
+                            "requiredHint": "",
+                            "validation": "",
+                            "validationHint": "",
+                            "customClass": [],
+                            "labelIconClass": null,
+                            "labelIconPosition": "rear",
+                            "labelTooltip": null,
+                            "minLength": null,
+                            "maxLength": null,
+                            "showWordLimit": false,
+                            "prefixIcon": "",
+                            "suffixIcon": "",
+                            "appendButton": false,
+                            "appendButtonDisabled": false,
+                            "buttonIcon": "el-icon-search",
+                            "onCreated": "",
+                            "onMounted": "",
+                            "onInput": "",
+                            "onChange": "",
+                            "onFocus": "",
+                            "onBlur": "",
+                            "onValidate": "",
+                            "onAppendButtonClick": ""
+                        },
+                        "id": "input112657"
+                    },
+                    {
+                        "type": "divider",
+                        "icon": "divider",
+                        "formItemFlag": false,
+                        "options": {
+                            "name": "divider32018",
+                            "label": "",
+                            "columnWidth": "200px",
+                            "direction": "horizontal",
+                            "contentPosition": "center",
+                            "hidden": false,
+                            "customClass": "",
+                            "onCreated": "",
+                            "onMounted": ""
+                        },
+                        "id": "divider32018"
+                    },
+                    {
+                        "type": "input",
+                        "icon": "text-field",
+                        "formItemFlag": true,
+                        "options": {
+                            "name": "取消视频点赞_执行次数",
+                            "label": "执行次数:",
+                            "labelAlign": "",
+                            "type": "text",
+                            "defaultValue": "100",
+                            "placeholder": "",
+                            "columnWidth": "200px",
+                            "size": "",
+                            "labelWidth": null,
+                            "labelHidden": false,
+                            "readonly": false,
+                            "disabled": false,
+                            "hidden": false,
+                            "clearable": true,
+                            "showPassword": false,
+                            "required": false,
+                            "requiredHint": "",
+                            "validation": "",
+                            "validationHint": "",
+                            "customClass": "",
+                            "labelIconClass": null,
+                            "labelIconPosition": "rear",
+                            "labelTooltip": null,
+                            "minLength": null,
+                            "maxLength": null,
+                            "showWordLimit": false,
+                            "prefixIcon": "",
+                            "suffixIcon": "",
+                            "appendButton": false,
+                            "appendButtonDisabled": false,
+                            "buttonIcon": "el-icon-search",
+                            "onCreated": "",
+                            "onMounted": "",
+                            "onInput": "",
+                            "onChange": "",
+                            "onFocus": "",
+                            "onBlur": "",
+                            "onValidate": "",
+                            "onAppendButtonClick": ""
+                        },
+                        "id": "input88810"
+                    }
+                ],
+                "formConfig": {
+                    "modelName": "formData",
+                    "refName": "vForm",
+                    "rulesName": "rules",
+                    "labelWidth": 100,
+                    "labelPosition": "left",
+                    "size": "",
+                    "labelAlign": "label-center-align",
+                    "cssCode": "",
+                    "customClass": "",
+                    "functions": "",
+                    "layoutType": "H5",
+                    "onFormCreated": "",
+                    "onFormMounted": "",
+                    "onFormDataChange": "",
+                    "onFormValidate": ""
+                }
+            },
+            formData: window.ec.getConfig("jsonCfgOriginal") ? JSON.parse(window.ec.getConfig("jsonCfgOriginal")) : {},
+            optionData: {}
+        },
+        mounted() {
+            try {
+                if (this.formJson.widgetList[0].type === "alert") {
+                    this.formJson.widgetList[0].options.title = window.ec.call("getVersion", null)
+                }
+            } catch (e) {
+                console.log(e)
+            }
+        },
+        methods: {
+            saveForm(mode) {
+                this.$refs.vFormRef.getFormData().then(formData => {
+                    //保存form表单原始格式,以便存储ui的状态
+                    //console.log(JSON.stringify(formData))
+                    window.ec.saveConfig("jsonCfgOriginal", JSON.stringify(formData))
+                    //处理成脚本能识别的格式
+                    for (let i = 0; i < this.formJson.widgetList.length; i++) {
+                        this.parseForm(formData, this.formJson.widgetList[i])
+                    }
+                    //此处是脚本可识别的格式
+                    console.log(JSON.stringify(formData))
+                    //保存到ec配置
+                    window.ec.saveConfig("jsonCfg", JSON.stringify(formData))
+                    //保存功能配置,供主脚本判断执行什么功能
+                    window.ec.saveConfig("执行功能", JSON.stringify({"执行功能": "取消视频点赞"}))
+                    if (mode === 0) {
+                        this.$message.success("保存配置成功")
+                    } else {
+                        this.$message.success("保存配置成功,启动脚本")
+                        // window.ec.start()
+                        console.log("启动抖音...")
+                        window.ec.toast("启动抖音...")
+                        window.ec.call('打开抖音', null)
+                    }
+                }).catch(error => {
+                    this.$message.error(error)
+                })
+            },
+            parseForm(formData, formJson) {
+                if (formJson.type === "input" && formJson.options.type === "number") {
+                    formData[formJson.options.name] = Number(formData[formJson.options.name])
+                    return true
+                } else if (formJson.type === "checkbox") {
+                    for (let i = 0; i < formJson.options.optionItems.length; i++) {
+                        if (formData[formJson.options.name]) {
+                            if (formData[formJson.options.name] && formData[formJson.options.name].constructor.name === "Array") {
+                                formData[formJson.options.optionItems[i].value] = formData[formJson.options.name].indexOf(formJson.options.optionItems[i].value) > -1
+                            }
+                        }
+                    }
+
+                    if (formData[formJson.options.name] && formData[formJson.options.name].constructor.name === "Array") {
+                        delete formData[formJson.options.name]
+                    }
+                } else if (formJson.type === "tab") {
+                    for (let j = 0; j < formJson.tabs.length; j++) {
+                        // console.log(formJson.tabs[j].widgetList)
+                        for (let k = 0; k < formJson.tabs[j].widgetList.length; k++) {
+                            this.parseForm(formData, formJson.tabs[j].widgetList[k])
+
+                        }
+                    }
+                } else if (formJson.type === "grid") {
+                    for (let i = 0; i < formJson.cols.length; i++) {
+                        for (let j = 0; j < formJson.cols[i].widgetList.length; j++) {
+                            this.parseForm(formData, formJson.cols[i].widgetList[j])
+                        }
+                    }
+                } else {
+                    if (formJson.widgetList) {
+                        for (let i = 0; i < formJson.widgetList.length; i++) {
+                            this.parseForm(formData, formJson.widgetList[i])
+                        }
+                    }
+                }
+                return false
+            },
+        }
+    });
+</script>
+</body>
+</html>

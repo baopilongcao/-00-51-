@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>智能获客系统</title>
+    <meta name="keywords" content="智能获客系统">
+    <meta name="description" content="智能获客系统">
+    <link rel="stylesheet" href="css/text.css">
+    <script src="../../public/JavaScript/vue.js"></script>
+    <script src="../../public/JavaScript/jquery1.min.js"></script>
+    <script src="../../public/JavaScript/jquery.min.js"></script>
+    <!-- import JavaScript -->
+    <script src="../../public/JavaScript/index.js"></script>
+    <script src="../../public/JavaScript/JavaScript.js"></script>
+</head>
+<body>
+<header>
+    <!--    <div class="header max flex flex-center">-->
+    <!--      <h1>智能获客系统</h1>-->
+    <!--    </div>-->
+    <main class="max">
+        <div id="app">
+            <!--公告-->
+            <div>
+                <img src="images/heard_img.jpg" alt="" style="height: auto;" class="app">
+            </div>
+            <!-- 个人中心 -->
+            <main class="app">
+                <!--        <div class="app-meta flex">-->
+                <!--          <h1>个人中心</h1>-->
+                <!--          <h2>账户详情</h2>-->
+                <!--        </div>-->
+                <div>
+                    <hr>
+                    <div style="height: 5px"></div>
+                    <i class="el-icon-monitor"></i>
+                    <p style="display:inline;">设备标识<span style="float:right;" id="sbbs"> 设备标识</span></p>
+                    <div style="height: 5px"></div>
+                    <hr>
+                </div>
+                <div>
+                    <div style="height: 5px"></div>
+                    <i class="el-icon-news"></i>
+                    <p style="display:inline;">注册信息<span style="float:right;" id="注册信息"> 注册信息 </span></p>
+                    <div style="height: 5px"></div>
+                    <hr>
+                </div>
+
+
+            </main>
+            <!--大板块-->
+            <main class="app" v-for="main in cards" v-if="![3,4].includes(main.id)">
+                <!--v-if="![].includes(main.id)"-->
+                <div class="app-meta flex">
+                    <h1>{{main.title1}}</h1>
+                    <!--                    <h2>各种资源，总有你需要的！</h2>-->
+                </div>
+                <ul class="flex">
+                    <li class="app-item" v-for="hero in main.products"
+                        v-if="![].includes(hero.id)">
+                        <!--v-if="![].includes(hero.id)"-->
+                        <a class="flex" target="_blank" v-bind:href="hero.href" rel="bookmark">
+                            <img class="app-item-img" :src="hero.qtb_img_src">
+                            <h1 class="app-item-title">{{hero.qtb_name}}</h1>
+                        </a>
+                    </li>
+                </ul>
+            </main>
+            <!--大板块-->
+</header>
+</body>
+<script src="../../public/JavaScript/gn.js"></script>
+</html>

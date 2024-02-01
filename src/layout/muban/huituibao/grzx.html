@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--    <link rel="stylesheet" href="../huituibao/css/text.css">-->
+    <link rel="stylesheet" href="css/text.css">
+    <script src="../../public/JavaScript/vue.js"></script>
+    <script src="../../public/JavaScript/jquery1.min.js"></script>
+    <script src="../../public/JavaScript/jquery.min.js"></script>
+    <!-- import JavaScript -->
+    <script src="../../public/JavaScript/index.js"></script>
+    <script src="../../public/JavaScript/JavaScript.js"></script>
+    <style>
+        .trp{
+        text-align:right;
+        display: inline-block;
+        }
+        .btn{
+            width: 95%;
+            margin: 5px;
+            border-radius: 80px;
+            height: 40px;
+            background-color: rgb(129, 127, 255);
+        }
+    </style>
+</head>
+<body>
+<!--    <header class="header">-->
+<!--        <h1>慧推宝·个人中心</h1>-->
+<!--    </header>-->
+    <main class="tou">
+        <div class="app" style="text-align: center;">
+            <img src="../huituibao/images/touxiang.png" alt="" style=" width:80px;  height:80px;  border-radius:80px; text-align: center; display: inline-block; vertical-align: middle;">
+            <div style="margin-top: 15px; margin-bottom: 15px;">
+                <p style="margin-bottom: 5px;">设备标识</p>
+                <span id="sbbs">1231231231313132</span>
+            </div>
+
+        </div>
+        <div class="app">
+            <div style="height: 8px"></div>
+            <p class="trp">到期时间：</p><span id="注册信息" style="float: right;">2020-01-01</span>
+            <div style="height: 8px"></div>
+            <hr>
+            <div style="height: 8px"></div>
+            <p class="trp">显示语言：</p><span style="float: right;">简体中文</span>
+            <div style="height: 8px"></div>
+            <hr>
+            <div style="height: 8px"></div>
+            <p class="trp">显示主题：</p><span style="float: right;">默认主题</span>
+            <div style="height: 8px"></div>
+            <hr>
+            <div style="height: 8px"></div>
+            <p class="trp">手机型号：</p><span style="float: right;">null</span>
+            <div style="height: 8px"></div>
+            <hr>
+            <div style="height: 8px"></div>
+            <p class="trp">系统版本：</p><span style="float: right;">1.2</span>
+            <div style="height: 8px"></div>
+            <hr>
+        </div>
+        <div style="text-align: center;">
+            <button class="btn" style="background-color: rgb(250, 102, 16);">点击进入激活指引解锁全部功能</button>
+            <button class="btn">清空本地场景</button>
+            <button class="btn">立即退出</button>
+        </div>
+        <!-- 版权说明 -->
+        <div class="powered">
+            <span>本APP仅供个人使用,请勿用于非法途径!一切后果自负</span>
+            <span>powered by 慧推宝</span>
+        </div>
+        <!-- 底部选项 -->
+        <div class="menu">
+            <div class="subMenu text-center" onclick="window.location.href='./index.html'">
+                <img style="margin: -5px; margin-top:0px; " class="menu_img" src="../huituibao/images/shouye.png" alt="">
+                <div class="menu_name">首页</div>
+            </div>
+            <div class="subMenu text-center" onclick="window.location.href='./bh.html'">
+                <img style="margin: -5px; margin-top:0px; " class="menu_img" src="../huituibao/images/shezhi.png" alt="">
+                <div class="menu_name">设置</div>
+            </div>
+            <div class="subMenu text-center" onclick="window.location.href='./grzx.html'">
+                <img style="margin: -5px; margin-top:0px; " class="menu_img" src="../huituibao/images/my.png" alt="">
+                <div class="menu_name">个人中心</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

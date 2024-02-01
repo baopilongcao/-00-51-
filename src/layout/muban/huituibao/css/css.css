@@ -1,0 +1,21 @@
+.item .product {
+    width: 32%;
+    text-align: center;
+    margin: -2px;
+    margin-bottom: 12px;
+}
+
+.pb {
+    margin-top: 10px;
+    padding-top: 0px;
+    font-size: 14px;
+}
+
+.inline-div {
+    display: inline-block;
+}
+
+.come {
+    padding: 0px;
+    margin: 5px;
+}
